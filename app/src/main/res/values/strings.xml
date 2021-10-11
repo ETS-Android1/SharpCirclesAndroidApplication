@@ -1,3 +1,26 @@
 <resources>
     <string name="app_name">SharpCirclesAndroidApp</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="steps">Steps</string>
+
+    <string name="aboutus"><b>About Us</b></string>
+    <string name="aboutuscontent1"><p>Sharp Circles is a professional Australian digital marketing and SEO company based in Melbourne and Sydney. With more than 35 years experience in digital marketing and online business development, we specialise in full data driven analysis to develop target specific SEO solutions. \n \n We help: \n - Small and medium sized businesses to improve the performance of their websites \n - Achieve first page rankings in Google’s organic search results.</p></string>
+    <string name="aboutuscontent2"> <b>How we work with you:</b> \n
+Your SEO project is managed by professionals from the moment the order is placed, and throughout the duration of each campaign. From the outset, we work closely with you to understand your business and your customers’ needs. \n \n
+
+        <b>Unfamiliar with SEO?</b> \n
+You will easily see and understand the results process without any unnecessary complexity or confusion. SEO provides you with quantifiable and trackable results. You can regularly view ranking and traffic updates.
+
+A full SEO analytics report can provide extensive customer data for sustained campaign planning. To ensure you’re kept informed every step of the way, we will: \n
+
+* Set the right expectations and goals \n
+* Plan an effective strategy \n
+* Put the plan in place \n
+* Closely monitor progress \n
+* Provide clear and easy to understand performance reports</string>
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
 </resources>
