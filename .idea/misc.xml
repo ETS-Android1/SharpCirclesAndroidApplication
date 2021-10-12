@@ -3,6 +3,7 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="app/src/main/res/drawable/card_edge.xml" value="0.11018518518518519" />
         <entry key="app/src/main/res/layout/about_activity.xml" value="0.12183383991894631" />
         <entry key="app/src/main/res/layout/activity_about.xml" value="0.1" />
         <entry key="app/src/main/res/layout/activity_faq.xml" value="0.29583333333333334" />

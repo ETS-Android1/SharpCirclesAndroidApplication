@@ -3,7 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:layout_margin="5dp"
+    android:layout_margin="@dimen/half_margin"
     >
 
     <androidx.cardview.widget.CardView
@@ -11,14 +11,17 @@
         android:layout_height="match_parent"
         android:id="@+id/cv"
         app:cardBackgroundColor="@color/colorPrimaryDark"
-        app:cardElevation="5dp"
-        app:cardCornerRadius="10dp"
-        android:padding="@dimen/fab_margin"
+        app:cardElevation="2dp"
+        app:cardCornerRadius="@dimen/normal_padding"
+        android:padding="2dp"
         >
         <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="horizontal">
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_margin="3dp"
+            android:background="@color/white"
+            android:padding="@dimen/normal_padding">
 
 
             <TextView
@@ -28,6 +31,7 @@
                 android:textStyle="bold"
                 android:text="Step 1"
                 android:padding="10dip"
+                android:background="@color/colorPrimaryDark"
                 android:textColor="@color/white"
                 android:textSize="@dimen/fab_margin"
                 android:layout_margin="2dp"
@@ -41,7 +45,7 @@
                 android:layout_width="fill_parent"
                 android:layout_height="fill_parent"
                 android:padding="10dip"
-                android:textColor="@color/white"
+                android:textColor="@color/colorPrimaryDark"
                 android:textSize="16dip"
                 android:text="step"
                 android:textStyle="normal" />

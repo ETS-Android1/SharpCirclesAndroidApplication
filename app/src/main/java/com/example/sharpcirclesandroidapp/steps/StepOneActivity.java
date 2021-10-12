@@ -1,5 +1,6 @@
 package com.example.sharpcirclesandroidapp.steps;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
 
@@ -16,11 +17,16 @@ public class StepOneActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_steppages);
+        Intent intent = getIntent();
+        String stepname = intent.getExtras().getString("Stepname");
+        String stepnum = intent.getExtras().getString("Stepnum");
+
         toolbar = findViewById(R.id.toolbar);
-        toolbar.setTitle("Step 1: Site Verification");
+        toolbar.setTitle(stepnum+ ":" + stepname);
         setSupportActionBar(toolbar);
         ActionBar actionBar = getSupportActionBar();
         actionBar.setDisplayHomeAsUpEnabled(true);
+
 
     }
 

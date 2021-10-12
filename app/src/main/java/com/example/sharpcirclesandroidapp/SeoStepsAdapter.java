@@ -78,6 +78,8 @@ public class SeoStepsAdapter extends RecyclerView.Adapter<SeoStepsAdapter.ViewHo
                         intent = new Intent(context, StepOneActivity.class);
                         break;
                 }
+                intent.putExtra("Stepnum", tvShow.getStepnum());
+                intent.putExtra("Stepname", tvShow.getSteps());
                 context.startActivity(intent);
             }
         });
