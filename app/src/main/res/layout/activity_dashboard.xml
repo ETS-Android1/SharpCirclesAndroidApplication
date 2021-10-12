@@ -14,7 +14,7 @@
         android:layout_marginTop="337dp"
         android:layout_marginEnd="144dp"
         android:layout_marginBottom="362dp"
-        android:text="Dashboard screen"
+        android:text="Dash"
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
