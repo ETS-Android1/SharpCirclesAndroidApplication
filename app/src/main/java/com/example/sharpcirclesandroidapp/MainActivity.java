@@ -23,6 +23,7 @@ public class MainActivity extends AppCompatActivity {
         setSupportActionBar(toolbar);
         Button aboutbutton = (Button)findViewById(R.id.buttonabout);
         Button stepbutton = (Button)findViewById(R.id.buttonstep);
+        Button buttonhelp =(Button)findViewById(R.id.buttonhelp);
 
         aboutbutton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -37,6 +38,14 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent stepbuttonclick = new Intent(MainActivity.this,StepActivity.class);
                 startActivity(stepbuttonclick);
+            }
+        });
+
+        buttonhelp.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent helpbuttonclick = new Intent(MainActivity.this,HelpActivity.class);
+                startActivity(helpbuttonclick);
             }
         });
 

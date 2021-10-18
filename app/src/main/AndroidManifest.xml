@@ -27,6 +27,8 @@
             android:exported="true"/>
         <activity android:name=".steps.StepOneActivity"
             android:exported="true"/>
+        <activity android:name=".HelpActivity"
+            android:exported="true"/>
 
     </application>
 
