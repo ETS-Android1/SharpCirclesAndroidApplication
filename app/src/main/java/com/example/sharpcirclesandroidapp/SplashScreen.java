@@ -3,6 +3,7 @@ package com.example.sharpcirclesandroidapp;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.os.Handler;
 import android.view.WindowManager;
@@ -18,19 +19,21 @@ public class SplashScreen extends AppCompatActivity {
     //variables
     Animation topAnim, bottomAnim;
     ImageView image;
-    TextView logo,slogan;
+    TextView logo, slogan;
+
+    SharedPreferences onBoardingScreen;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,WindowManager.LayoutParams.FLAG_FULLSCREEN); // remove status bar
+        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN); // remove status bar
         setContentView(R.layout.splash_screen);
 
         //Animations
 
-        topAnim = AnimationUtils.loadAnimation(this,R.anim.top_animation);
-        bottomAnim = AnimationUtils.loadAnimation(this,R.anim.bottom_animation);
+        topAnim = AnimationUtils.loadAnimation(this, R.anim.top_animation);
+        bottomAnim = AnimationUtils.loadAnimation(this, R.anim.bottom_animation);
 
         //Hooks
         image = findViewById(R.id.imageView);
@@ -44,11 +47,27 @@ public class SplashScreen extends AppCompatActivity {
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
-                Intent intent = new Intent(SplashScreen.this,Dashboard.class);
-                startActivity(intent);
-                finish(); // remove the Splashscreen from activity list
+                onBoardingScreen = getSharedPreferences("onBoardingScreen", MODE_PRIVATE);
+
+                boolean isFirstTime = onBoardingScreen.getBoolean("firstTime", true);
+
+                if (isFirstTime) {
+
+                    SharedPreferences.Editor editor = onBoardingScreen.edit();
+                    editor.putBoolean("firstTime", false);
+                    editor.commit();
+
+                    Intent intent = new Intent(SplashScreen.this, OnBoarding.class);
+                    startActivity(intent);
+                    finish(); // remove the Splashscreen from activity list
+                } else {
+                    Intent intent = new Intent(SplashScreen.this, Dashboard.class);
+                    startActivity(intent);
+                    finish(); // remove the Splashscreen from activity list
+                }
+
             }
-        },SPLASH_SCREEN);
+        }, SPLASH_SCREEN);
 
     }
 }
